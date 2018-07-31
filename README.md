@@ -38,10 +38,7 @@ Dependencies
 ------------
 
 - roles:
-
-  ```yaml
-  geerlingguy.apache
-  ```
+  - Apache 2.x [`geerlingguy.apache (https://galaxy.ansible.com/geerlingguy/apache)`](https://galaxy.ansible.com/geerlingguy/apache)
 
 Example Playbook
 ----------------
