@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: adrianovieira.osem.webserver
   author: Adriano Vieira
   description: passionate about Infrastructure as Code, DevOps, Lean Thinking
 
