@@ -38,7 +38,11 @@ Available variables are listed below, along with default values (see defaults/ma
 Dependencies
 ------------
 
-*not applicable so far*
+- roles:
+
+  ```yaml
+  - geerlingguy.apache
+  ```
 
 Example Playbook
 ----------------
