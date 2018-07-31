@@ -1,2 +1,4 @@
 ---
 # defaults file for adrianovieira.opensuse.osem
+nodesource: # Node.js repository version
+  version: 9
