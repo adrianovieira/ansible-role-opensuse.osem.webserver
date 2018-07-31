@@ -41,6 +41,18 @@
     - setup
     - packages
 
+- name: install gem bundler on CentOS-7
+  when:
+    - ansible_distribution|lower == "centos"
+    - ansible_distribution_major_version == "7"
+  # ! $(gem list -i bundler)
+  # gem_module didn't work for me so far
+  shell: 'gem install --no-document bundler'
+  tags:
+    - webserver
+    - setup
+    - bundler
+
 - name: install phantomjs
   when:
     - ansible_distribution|lower == "centos"
