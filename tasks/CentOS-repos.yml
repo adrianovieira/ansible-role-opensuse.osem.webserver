@@ -1,0 +1,43 @@
+---
+# tasks file for adrianovieira.opensuse.osem
+- name: add NodeJS YUM repo
+  yum_repository:
+    name: nodesource
+    description: Node.js Packages for Enterprise Linux 7 - $basearch
+    file: osem-external_repos
+    baseurl: https://rpm.nodesource.com/pub_{{ nodesource.version }}.x/el/7/$basearch
+    enabled: yes
+    gpgcheck: no
+    failovermethod: priority
+  notify: yum-clean-metadata
+
+- name: add Passenger YUM repo
+  yum_repository:
+    name: passenger
+    description: Phusion Passenger Packages for Enterprise Linux 7
+    file: osem-external_repos
+    baseurl: https://oss-binaries.phusionpassenger.com/yum/passenger/el/$releasever/$basearch
+    enabled: yes
+    gpgkey: https://packagecloud.io/gpg.key
+    repo_gpgcheck: 1
+    gpgcheck: 0
+    sslverify: 1
+    sslcacert: /etc/pki/tls/certs/ca-bundle.crt
+  notify: yum-clean-metadata
+
+- name: add RPMforge YUM repo
+  yum_repository:
+    name: rpmforge
+    description: RPMforge YUM repo
+    file: osem-external_repos
+    baseurl: http://apt.sw.be/redhat/el7/en/$basearch/rpmforge
+    mirrorlist: http://mirrorlist.repoforge.org/el7/mirrors-rpmforge
+    enabled: yes
+  notify: yum-clean-metadata
+
+- yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - epel-release
+  notify: yum-clean-metadata
