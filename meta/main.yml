@@ -1,7 +1,7 @@
 galaxy_info:
-  role_name: opensuse.osem.webserver
+  role_name: osem.webserver
   author: Adriano Vieira
-  description: passionate about Infrastructure as Code, DevOps, Lean Thinking
+  description: Ansible Role::OSEM Webserver - Installs OpenSUSE OSEM on Linux servers.
 
   issue_tracker_url: https://gitlab.com/adrianovieira/ansible-role-opensuse.osem.webserver/issues
 
