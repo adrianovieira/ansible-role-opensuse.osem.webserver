@@ -2,3 +2,13 @@
 # defaults file for adrianovieira.opensuse.osem
 nodesource: # Node.js repository version
   version: 9
+
+osem:
+ apache:
+   vhost:
+     ServerName: default
+     ServerAdmin: osem@osem-server.mylab
+     address: "*" # or IP etc
+     port: 80
+     DocumentRoot: /var/www/html/osem/public
+     RailsEnv: development
