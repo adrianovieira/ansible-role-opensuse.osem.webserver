@@ -24,15 +24,14 @@ Available variables are listed below, along with default values (see defaults/ma
 - apache virtual host
 
   ```yaml
-  osem:
-   apache:
-     vhost:
-       ServerName: default
-       ServerAdmin: osem@osem-server.mylab
-       address: "*"
-       port: 80
-       DocumentRoot: /var/www/html/osem/public
-       RailsEnv: development
+  # osem vhost via geerlingguy.apache
+  apache_listen_ip: "10.0.2.15"
+  apache_listen_port: 80
+  apache_listen_port_ssl: 443
+  apache_vhosts:
+    - servername: "osem-server.mylab"
+      documentroot: "/var/www/html/osem/public"
+      serveradmin: osem@osem-server.mylab
   ```
 
 Dependencies
@@ -41,7 +40,7 @@ Dependencies
 - roles:
 
   ```yaml
-  - geerlingguy.apache
+  geerlingguy.apache
   ```
 
 Example Playbook
