@@ -68,3 +68,17 @@
     - webserver
     - setup
     - phantomjs
+
+- name: Enable the firewall port 80/443 for Apache
+  firewalld:
+    port: "{{ item }}"
+    state: enabled
+    immediate: yes
+    permanent: true
+  loop:
+    - 80/tcp
+    - 443/tcp
+  tags:
+    - webserver
+    - setup
+    - firewall
