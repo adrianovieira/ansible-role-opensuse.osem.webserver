@@ -46,6 +46,8 @@ Example Playbook
 ```yaml
 ---
 - hosts: osem-webservers
+  vars_files:
+    - vars/main.yml
   roles:
     - role: ansible-opensuse.osem.webserver
 ```
