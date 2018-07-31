@@ -1,0 +1,6 @@
+---
+# tasks file for adrianovieira.opensuse.osem
+- import_tasks: tasks/CentOS-setup.yml
+  when:
+    - ansible_distribution|lower == "centos"
+    - ansible_distribution_major_version == "7"
