@@ -25,10 +25,10 @@ galaxy_info:
       - 7
 
   galaxy_tags:
-    - OpenSUSE
-    - OSEM
-    - Event
-    - Managemet
+    - opensuse
+    - osem
+    - event
+    - management
     - webserver
 
 dependencies:
