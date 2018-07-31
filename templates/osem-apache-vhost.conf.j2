@@ -1,0 +1,13 @@
+<VirtualHost {{ osem.apache.vhost.address }}:{{ osem.apache.vhost.port }}>
+  ServerName {{ osem.apache.vhost.ServerName }}
+  ServerAdmin {{ osem.apache.vhost.ServerAdmin }}
+  DocumentRoot {{ osem.apache.vhost.DocumentRoot }}
+
+  # RailsEnv production (this is the default)
+  #SetEnv RAILS_ENV {{ osem.apache.vhost.RailsEnv }}
+
+  <Directory {{ osem.apache.vhost.DocumentRoot }}>
+    Allow from all
+    Options -MultiViews
+  </Directory>
+</VirtualHost>
