@@ -40,6 +40,17 @@ Dependencies
 - roles:
   - Apache 2.x [`geerlingguy.apache (https://galaxy.ansible.com/geerlingguy/apache)`](https://galaxy.ansible.com/geerlingguy/apache)
 
+Installation samples
+
+- `requirements.yml` file
+
+```yaml
+# sample requirements.yml file with the source from GitLab
+- src: https://gitlab.com/adrianovieira/ansible-opensuse.osem.webserver.git
+  scm: git
+  name: adrianovieira.osem.webserver
+```
+
 Example Playbook
 ----------------
 
@@ -49,7 +60,7 @@ Example Playbook
   vars_files:
     - vars/main.yml
   roles:
-    - role: ansible-opensuse.osem.webserver
+    - role: adrianovieira.osem.webserver
 ```
 
 License
