@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: osem.webserver
+  role_name: osem_webserver
   author: Adriano Vieira
   description: Ansible Role::OSEM Webserver - Installs OpenSUSE OSEM on Linux servers.
 

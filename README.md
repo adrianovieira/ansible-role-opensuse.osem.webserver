@@ -48,7 +48,7 @@ Installation samples
 # sample requirements.yml file with the source from GitLab
 - src: https://gitlab.com/adrianovieira/ansible-opensuse.osem.webserver.git
   scm: git
-  name: adrianovieira.osem.webserver
+  name: adrianovieira.osem_webserver
 ```
 
 Example Playbook
@@ -60,7 +60,7 @@ Example Playbook
   vars_files:
     - vars/main.yml
   roles:
-    - role: adrianovieira.osem.webserver
+    - role: adrianovieira.osem_webserver
 ```
 
 License
