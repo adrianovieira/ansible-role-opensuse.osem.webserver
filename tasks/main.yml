@@ -9,3 +9,11 @@
   tags:
     - webserver
     - osem
+
+- name: restart webserver
+  command: echo "this task will restart the web services"
+  notify: "restart web services"
+  tags:
+    - webserver
+    - osem
+    - service
