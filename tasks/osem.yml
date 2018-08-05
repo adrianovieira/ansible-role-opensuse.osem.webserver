@@ -19,3 +19,12 @@
     - environment
 
 - import_tasks: tasks/osem-setup.yml
+
+- bundler:
+    executable: /usr/local/bin/bundler
+    chdir: '{{ osem_rootdir | mandatory }}'
+  tags:
+    - webserver
+    - deploy
+    - osem
+    - bundler
