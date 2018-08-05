@@ -37,16 +37,16 @@
   state: directory
 
 - file:
-  # it needs to be the last task
-  path: "{{osem_rootdir}}"
-  owner: apache
-  group: apache
-  recurse: yes
+    # it needs to be the last task
+    path: "{{osem_rootdir}}"
+    owner: apache
+    group: apache
+    recurse: yes
   when:
     - ansible_distribution|lower == "centos"
     - ansible_distribution_major_version == "7"
-    tags:
-      - webserver
-      - setup
-      - osem
-      - environment
+  tags:
+    - webserver
+    - setup
+    - osem
+    - environment
