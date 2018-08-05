@@ -7,3 +7,13 @@
     - setup
     - osem
     - apache
+
+- git:
+    repo: 'https://github.com/openSUSE/osem.git'
+    dest: '{{ osem_rootdir | mandatory }}'
+    version: '{{ osem_release }}'
+  tags:
+    - webserver
+    - deploy
+    - osem
+    - environment
