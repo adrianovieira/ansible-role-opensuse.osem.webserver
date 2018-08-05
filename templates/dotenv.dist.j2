@@ -1,0 +1,88 @@
+# Set environment variables for OSEM in this file
+# and copy it to .env or .env.rails_environment
+# (like env.production or env.development)
+#
+# The following is a list of variables and default
+# values that OSEM uses to configure some aspects
+# of the app
+
+# The name of your page
+OSEM_NAME='{{ osem_name | mandatory }}'
+
+# The host this OSEM instance runs on. Used for
+# generating urls in emails sent
+OSEM_HOSTNAME='{{osem_hostname | mandatory }}:{{osem_hostname_port | mandatory}}'
+
+# The address OSEM uses for sending mails
+OSEM_EMAIL_ADDRESS='{{osem_email_address | mandatory }}'
+
+# (Optional) The Conference#short_title to redirect the root URL to
+OSEM_ROOT_CONFERENCE='{{osem_root_conference}}'
+
+# (Optional) log level in production environment
+OSEM_LOG_LEVEL='{{osem_log_level}}'
+
+# The api key for transifex.com.
+# See TRANSLATION.md for details
+OSEM_TRANSIFEX_APIKEY='{{osem_transifex_apikey}}'
+
+# The errbit host to post exceptions to
+OSEM_ERRBIT_HOST='{{osem_errbit_host}}'
+# The api key for the errbit host
+OSEM_ERRBIT_APIKEY='{{osem_errbit_apikey}}'
+
+# OMNIAUTH Developer Key/Secret for GOOGLE
+OSEM_GOOGLE_KEY='{{osem_google_key}}'
+OSEM_GOOGLE_SECRET='{{osem_google_secret}}'
+
+# OMNIAUTH Developer Key/Secret for Facebook
+OSEM_FACEBOOK_KEY='{{osem_facebook_key}}'
+OSEM_FACEBOOK_SECRET='{{osem_facebook_secret}}'
+
+# OMNIAUTH Developer Key/Secret for GitHub
+OSEM_GITHUB_KEY='{{osem_github_key}}'
+OSEM_GITHUB_SECRET='{{osem_github_secret}}'
+
+# OMNIAUTH Developer KEY/Secret for SUSE/openSUSE
+OSEM_SUSE_KEY='{{osem_suse_key}}'
+OSEM_SUSE_SECRET='{{osem_suse_secret}}'
+
+# STRIPE Publishable/Secret keys
+# test keys for development mode, live for production mode
+STRIPE_PUBLISHABLE_KEY='{{osem_stripe_publishable_key}}'
+STRIPE_SECRET_KEY='{{osem_stripe_secret_key}}'
+
+# (OPTIONAL) Skylight keys. See https://www.skylight.io/oss.
+SKYLIGHT_AUTHENTICATION='{{osem_skylight_authentication}}'
+SKYLIGHT_PUBLIC_DASHBOARD_URL='{{osem_skylight_public_dashboard_url}}'
+
+# Disable linting of factories in the test suite.
+# Speeds up turn around times of tests
+OSEM_FACTORY_LINT='{{osem_factory_lint}}'
+
+# The smtp configuration. See the rails guides for more
+# http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
+OSEM_SMTP_ADDRESS='{{osem_smtp_address}}'
+OSEM_SMTP_PORT='{{osem_smtp_port}}'
+OSEM_SMTP_USERNAME='{{osem_smtp_username}}'
+OSEM_SMTP_PASSWORD='{{osem_smtp_password}}'
+OSEM_SMTP_AUTHENTICATION='{{osem_smtp_authentication}}'
+OSEM_SMTP_DOMAIN='{{osem_smtp_domain}}'
+OSEM_SMTP_ENABLE_STARTTLS_AUTO='{{osem_smtp_enable_starttls_auto}}'
+OSEM_SMTP_OPENSSL_VERIFY_MODE='{{osem_smtp_openssl_verify_mode}}'
+
+# Enable the usage of the devise ichain plugin
+OSEM_ICHAIN_ENABLED='{{osem_ichain_enabled}}'
+
+# enable this to force SSL
+FORCE_SSL='{{osem_force_ssl}}'
+
+# ReCAPTCHA keys
+RECAPTCHA_SITE_KEY='{{osem_recaptcha_site_key}}'
+RECAPTCHA_SECRET_KEY='{{osem_recaptcha_secret_key}}'
+
+# The url of the redis server
+OSEM_REDIS_URL='{{osem_redis_url}}'
+
+SECRET_KEY_BASE={{osem_secret_key_base | mandatory }}
+RAILS_ENV={{osem_rails_env | mandatory}}
