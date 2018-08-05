@@ -4,3 +4,12 @@
   command: yum clean metadata
   args:
     warn: no
+
+- name: restart apache
+  service:
+    name: httpd
+    state: restarted
+  listen: "restart web services"
+  when:
+    - ansible_distribution|lower == "centos"
+    - ansible_distribution_major_version == "7"
