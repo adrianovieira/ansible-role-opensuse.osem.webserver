@@ -22,6 +22,7 @@
 - bundler:
     executable: /usr/local/bin/bundler
     chdir: '{{ osem_rootdir | mandatory }}'
+    extra_args: '--deployment --without test development'
   tags:
     - webserver
     - deploy
