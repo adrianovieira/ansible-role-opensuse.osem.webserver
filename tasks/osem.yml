@@ -28,3 +28,14 @@
     - deploy
     - osem
     - bundler
+
+- name: run rake to generate assets
+  shell:
+    chdir: '{{ osem_rootdir }}'
+    cmd:  "RAILS_ENV={{ osem_rails_env }} /usr/local/bin/bundle exec rake assets:precompile"
+  register: result
+  tags:
+    - webserver
+    - deploy
+    - osem
+    - assets
