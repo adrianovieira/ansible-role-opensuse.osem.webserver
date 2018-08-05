@@ -16,7 +16,6 @@
     - webserver
     - deploy
     - osem
-    - environment
 
 - import_tasks: tasks/osem-setup.yml
 
