@@ -29,6 +29,14 @@
     - environment
 
 - file:
+  path: "{{osem_rootdir}}/log"
+  state: directory
+
+- file:
+  path: "{{osem_rootdir}}/tmp/uploads"
+  state: directory
+
+- file:
   # it needs to be the last task
   path: "{{osem_rootdir}}"
   owner: apache
