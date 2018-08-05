@@ -1,7 +1,7 @@
 ---
 # tasks file for adrianovieira.opensuse.osem
 - template:
-    src: dotenv.dist.j2
+    src: dotenv-dist.j2
     dest: "{{osem_rootdir}}/.env.production"
     owner: apache
     group: apache
