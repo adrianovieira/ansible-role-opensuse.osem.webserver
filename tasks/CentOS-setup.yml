@@ -36,6 +36,7 @@
     - apr-util-devel
     - passenger
     - mod_passenger
+    - ruby-devel
   tags:
     - webserver
     - setup
