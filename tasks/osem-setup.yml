@@ -29,12 +29,22 @@
     - environment
 
 - file:
-  path: "{{osem_rootdir}}/log"
-  state: directory
+    path: "{{osem_rootdir}}/log"
+    state: directory
+  tags:
+    - webserver
+    - setup
+    - osem
+    - environment
 
 - file:
-  path: "{{osem_rootdir}}/tmp/uploads"
-  state: directory
+    path: "{{osem_rootdir}}/tmp/uploads"
+    state: directory
+  tags:
+    - webserver
+    - setup
+    - osem
+    - environment
 
 - file:
     # it needs to be the last task
