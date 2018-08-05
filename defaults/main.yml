@@ -91,3 +91,13 @@ osem_recaptcha_secret_key: ''
 
 # The url of the redis server
 osem_redis_url: # e.g 'redis://localhost:6379/1'
+
+# database config
+osem_database_adapter: mysql2
+osem_database_host: localhost
+osem_database_port: 3306
+osem_database_pool: 5
+osem_database_encoding: utf8
+osem_database_name: osem
+osem_database_username: username
+osem_database_password: password
