@@ -2,3 +2,92 @@
 # defaults file for adrianovieira.opensuse.osem
 nodesource: # Node.js repository version
   version: 9
+
+# variables for OSEM to .env or .env.rails_environment
+# The name of your page
+osem_name: 'OSEM'
+osem_release: 'v1.0'
+osem_rootdir: '/var/www/html/osem'
+
+# RAILS SECRET KEY
+# e.g SECRET_KEY_BASE=ef2eb183bd5b1539ee6ee63d9b2376d0b66785d092176a3c83bde1ef49d4092b404348f8a391661542e326bc4151da8b7b293b24deb4090c09152fdaad8ef5bb
+# RAILS_ENV=production
+osem_secret_key_base: ef2eb183bd5b1539ee6ee63d9b2376d0b66785d092176a3c83bde1ef49d4092b404348f8a391661542e326bc4151da8b7b293b24deb4090c09152fdaad8ef5bb
+osem_rails_env: production # e.g production || development
+
+# The host this OSEM instance runs on. Used for
+# generating urls in emails sent
+osem_hostname: 'localhost'
+osem_hostname_port: 3000
+
+# The address OSEM uses for sending mails
+osem_email_address: 'no-reply@localhost'
+
+# (Optional) The Conference#short_title to redirect the root URL to
+osem_root_conference: ''
+
+# (Optional) log level in production environment
+osem_log_level: # e.g 'info'
+
+# The api key for transifex.com.
+# See TRANSLATION.md for details
+osem_transifex_apikey: ''
+
+# The errbit host to post exceptions to
+osem_errbit_host: ''
+
+# The api key for the errbit host
+osem_errbit_apikey: ''
+
+# OMNIAUTH Developer Key/Secret for GOOGLE
+osem_google_key: ''
+osem_google_secret: ''
+
+# OMNIAUTH Developer Key/Secret for Facebook
+osem_facebook_key: ''
+osem_facebook_secret: ''
+
+# OMNIAUTH Developer Key/Secret for GitHub
+osem_github_key: ''
+osem_github_secret: ''
+
+# OMNIAUTH Developer KEY/Secret for SUSE/openSUSE
+osem_suse_key: ''
+osem_suse_secret: ''
+
+# STRIPE Publishable/Secret keys
+# test keys for development mode, live for production mode
+osem_stripe_publishable_key: ''
+osem_stripe_secret_key: ''
+
+# (OPTIONAL) Skylight keys. See https://www.skylight.io/oss.
+osem_skylight_authentication: ''
+osem_skylight_public_dashboard_url: # e.g 'https://oss.skylight.io/app/applications/xxxxxxxxxxxx'
+
+# Disable linting of factories in the test suite.
+# Speeds up turn around times of tests
+osem_factory_lint: 'false'
+
+# The smtp configuration. See the rails guides for more
+# http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
+osem_smtp_address: ''
+osem_smtp_port: ''
+osem_smtp_username: ''
+osem_smtp_password: ''
+osem_smtp_authentication: ''
+osem_smtp_domain: ''
+osem_smtp_enable_starttls_auto: ''
+osem_smtp_openssl_verify_mode: ''
+
+# Enable the usage of the devise ichain plugin
+osem_ichain_enabled: ''
+
+# enable this to force SSL
+osem_force_ssl: # e.g 0 or 1
+
+# ReCAPTCHA keys
+osem_recaptcha_site_key: ''
+osem_recaptcha_secret_key: ''
+
+# The url of the redis server
+osem_redis_url: # e.g 'redis://localhost:6379/1'
