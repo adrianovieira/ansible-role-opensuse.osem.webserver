@@ -14,20 +14,6 @@
     - osem
     - environment
 
-- file:
-    path: "{{osem_rootdir}}"
-    owner: apache
-    group: apache
-    recurse: yes
-  when:
-    - ansible_distribution|lower == "centos"
-    - ansible_distribution_major_version == "7"
-  tags:
-    - webserver
-    - setup
-    - osem
-    - environment
-
 - template:
     src: database-dist.yml.j2
     dest: "{{osem_rootdir}}/config/database.yml"
@@ -41,3 +27,18 @@
     - setup
     - osem
     - environment
+
+- file:
+  # it needs to be the last task
+  path: "{{osem_rootdir}}"
+  owner: apache
+  group: apache
+  recurse: yes
+  when:
+    - ansible_distribution|lower == "centos"
+    - ansible_distribution_major_version == "7"
+    tags:
+      - webserver
+      - setup
+      - osem
+      - environment
