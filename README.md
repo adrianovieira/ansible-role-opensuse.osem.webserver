@@ -43,17 +43,18 @@ Installation samples
 
 - `requirements.yml` file
 
-  ```yaml
-  # sample requirements.yml file with the source from GitLab
-  - src: https://gitlab.com/adrianovieira/ansible-opensuse.osem.webserver.git
-    scm: git
-    name: adrianovieira.osem_webserver
-  ```
+      ```yaml
+      # sample requirements.yml file with the source from GitLab
+      - src: https://gitlab.com/adrianovieira/ansible-opensuse.osem.webserver.git
+        scm: git
+        name: adrianovieira.osem_webserver
+      ```
+
 - or via *Galaxy*
 
-  ```bash
-  ansible-galaxy install adrianovieira.osem_webserver
-  ```
+      ```bash
+      ansible-galaxy install adrianovieira.osem_webserver
+      ```
 
 Example Playbook
 ----------------
