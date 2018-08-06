@@ -17,17 +17,16 @@ Available variables are listed below, along with default values (see defaults/ma
 
 - Node.js repository version
 
-      ```yaml
-      nodesource.version: 9
-      ```
+  ```yaml
+  nodesource.version: 9
+  ```
 
 Dependencies
 ------------
 
 - roles:
   - Apache 2.x [`geerlingguy.apache (https://galaxy.ansible.com/geerlingguy/apache)`](https://galaxy.ansible.com/geerlingguy/apache)
-    - apache virtual host
-
+    - apache virtual host  
       ```yaml
       # osem vhost via geerlingguy.apache
       apache_listen_ip: "10.0.2.15"
@@ -41,20 +40,18 @@ Dependencies
 
 Installation samples
 
-- `requirements.yml` file
+- `requirements.yml` file  
+    ```yaml
+    # sample requirements.yml file with the source from GitLab
+    - src: https://gitlab.com/adrianovieira/ansible-opensuse.osem.webserver.git
+      scm: git
+      name: adrianovieira.osem_webserver
+    ```
 
-      ```yaml
-      # sample requirements.yml file with the source from GitLab
-      - src: https://gitlab.com/adrianovieira/ansible-opensuse.osem.webserver.git
-        scm: git
-        name: adrianovieira.osem_webserver
-      ```
-
-- or via *Galaxy*
-
-      ```bash
-      ansible-galaxy install adrianovieira.osem_webserver
-      ```
+- or via *Galaxy*  
+  ```bash
+  ansible-galaxy install adrianovieira.osem_webserver
+  ```
 
 Example Playbook
 ----------------
