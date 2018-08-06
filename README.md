@@ -27,6 +27,7 @@ Dependencies
 - roles:
   - Apache 2.x [`geerlingguy.apache (https://galaxy.ansible.com/geerlingguy/apache)`](https://galaxy.ansible.com/geerlingguy/apache)
   - apache virtual host  
+
     ```yaml
     # osem vhost via geerlingguy.apache
     apache_listen_ip: "10.0.2.15"
