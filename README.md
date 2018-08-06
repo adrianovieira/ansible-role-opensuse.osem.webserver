@@ -36,7 +36,7 @@ Dependencies
         - servername: "osem-server.mylab"
           documentroot: "/var/www/html/osem/public"
           serveradmin: osem@osem-server.mylab
-    ```
+      ```
 
 Installation samples
 
