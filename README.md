@@ -21,24 +21,23 @@ Available variables are listed below, along with default values (see defaults/ma
   nodesource.version: 9
   ```
 
-- apache virtual host
-
-  ```yaml
-  # osem vhost via geerlingguy.apache
-  apache_listen_ip: "10.0.2.15"
-  apache_listen_port: 80
-  apache_listen_port_ssl: 443
-  apache_vhosts:
-    - servername: "osem-server.mylab"
-      documentroot: "/var/www/html/osem/public"
-      serveradmin: osem@osem-server.mylab
-  ```
-
 Dependencies
 ------------
 
 - roles:
   - Apache 2.x [`geerlingguy.apache (https://galaxy.ansible.com/geerlingguy/apache)`](https://galaxy.ansible.com/geerlingguy/apache)
+    - apache virtual host
+
+      ```yaml
+      # osem vhost via geerlingguy.apache
+      apache_listen_ip: "10.0.2.15"
+      apache_listen_port: 80
+      apache_listen_port_ssl: 443
+      apache_vhosts:
+        - servername: "osem-server.mylab"
+          documentroot: "/var/www/html/osem/public"
+          serveradmin: osem@osem-server.mylab
+    ```
 
 Installation samples
 
