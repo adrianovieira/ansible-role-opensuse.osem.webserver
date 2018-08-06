@@ -17,9 +17,9 @@ Available variables are listed below, along with default values (see defaults/ma
 
 - Node.js repository version
 
-  ```yaml
-  nodesource.version: 9
-  ```
+      ```yaml
+      nodesource.version: 9
+      ```
 
 Dependencies
 ------------
