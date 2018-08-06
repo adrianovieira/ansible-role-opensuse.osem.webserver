@@ -13,12 +13,17 @@ Role Variables
 
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
-Available variables are listed below, along with default values (see defaults/main.yml):
+Available variables are listed below, along with default values (see ***defaults/main.yml***):
 
-- Node.js repository version
+- database setup
 
   ```yaml
-  nodesource.version: 9
+  osem_database_adapter: mysql2 # only it so far
+  osem_database_host: localhost
+  osem_database_port: 3306
+  osem_database_name: osem
+  osem_database_username: username
+  osem_database_password: password
   ```
 
 Dependencies
